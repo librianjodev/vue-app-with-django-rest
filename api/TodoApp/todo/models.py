@@ -6,10 +6,9 @@ class WorkTodo(models.Model):
     WORKDONE = 'workdone'
 
     STATUS_CHOICES = (
-        (WORKTODO, 'Work To Do')
+        (WORKTODO, 'Work To Do'),
         (WORKDONE, 'Work Done')
     )
 
     work_description = models.CharField(max_length=255)
     work_status = models.CharField(max_length=10, choices=STATUS_CHOICES, default=WORKTODO)
-    
